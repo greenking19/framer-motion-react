@@ -1,5 +1,5 @@
 import './App.css';
-import Believe from './components/Believe';
+import Believe from './components/Believe/Believe';
 function App() {
   return (
     <div className='container 2lx h-full flex flex-col mx-auto font-dm-sans'>
