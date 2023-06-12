@@ -73,7 +73,7 @@ const Believe = () => {
   };
 
   return (
-    <div className='w-full lg:overflow-hidden h-[994px] flex flex-col lg:h-[596px] px-[20px] bg-white lg:relative'>
+    <div className='w-full lg:overflow-hidden h-[994px] flex flex-col lg:h-[796px] px-[20px]  bg-white lg:relative'>
       {/* title */}
       <div className='lg:absolute lg:left-[34px] mt-[72px] flex flex-col items-center lg:top-[229px]'>
         <div className='w-[325px] text-[16px] leading-[24px] text-center font-dm-sans text-[#1A1A1A] lg:w-[331px]'>
