@@ -2,7 +2,7 @@ import React from 'react';
 
 const Year = () => {
   return (
-    <div className="container w-full bg-cover bg-center h-[364px] lg:h-[512px]  bg-[url('./assets/surface01.png')] lg:bg-[url('./assets/surface.png')] lg:py-[80px]">
+    <div className="w-full bg-cover bg-center h-[364px] lg:h-[512px]  bg-[url('./assets/surface01.png')] lg:bg-[url('./assets/surface.png')] lg:py-[80px]">
       <div className='flex flex-col w-full h-full items-center justify-center lg:justify-between text-white'>
         <div className='flex flex-col items-center'>
           <div className='text-[16px] lg:text-[18px]'>

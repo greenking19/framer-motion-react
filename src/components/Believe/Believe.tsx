@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import './Believe.css';
+import useIsMobile from '../../hooks/useIsMobile';
 
 // types
 import type { Variants } from 'framer-motion';
 
 const Believe = () => {
   const [active, setActive] = React.useState('card1');
+  const isMobile = useIsMobile();
 
   const cardVariants: Variants = {
     init: {
@@ -18,6 +20,10 @@ const Believe = () => {
       rotate: '-7deg',
       width: '736px',
       gap: 30
+    },
+    mobile: {
+      width: '100%',
+      gap: 0
     }
   };
 
@@ -31,6 +37,10 @@ const Believe = () => {
       left: 716,
       rotate: '-7deg',
       width: '736px'
+    },
+    mobile: {
+      width: '100%',
+      gap: 0
     }
   };
 
@@ -63,7 +73,7 @@ const Believe = () => {
   };
 
   return (
-    <div className='w-full h-[994px] flex flex-col lg:h-[596px] px-[20px] bg-white lg:relative'>
+    <div className='w-full lg:overflow-hidden h-[994px] flex flex-col lg:h-[596px] px-[20px] bg-white lg:relative'>
       {/* title */}
       <div className='lg:absolute lg:left-[34px] mt-[72px] flex flex-col items-center lg:top-[229px]'>
         <div className='w-[325px] text-[16px] leading-[24px] text-center font-dm-sans text-[#1A1A1A] lg:w-[331px]'>
@@ -78,17 +88,17 @@ const Believe = () => {
       <motion.div
         layout
         className='w-full mt-[24px] h-[373px] box-borde lg:h-[355px] lg:absolute lg:left-[368px] bg-[#EDE9FF] rounded-[5px] top-[130px] border border-current lg:p-[20px] lg:gap-[30px] flex flex-col lg:flex-row'
-        // animate={active === 'card1' ? 'hover' : 'init'}
-        // variants={cardVariants}
-        // transition={{ duration: 0.6 }}
+        animate={!isMobile ? (active === 'card1' ? 'hover' : 'init') : 'mobile'}
+        variants={cardVariants}
+        transition={{ duration: 0.6 }}
       >
         <div
           className={`w-full h-[189px] lg:h-[315px] lg:w-[330px] bg-center bg-cover bg-invana`}
         />
         <motion.div
-          // variants={titleVariants}
-          className='mt-[24px] ml-[20px] text-[18px] leading-[18px] font-poly-sans lg:absolute lg:text-[20px] lg:leading-[20px] font-semibold'
-          // transition={{ duration: 0.6 }}
+          variants={titleVariants}
+          className='mt-[24px] ml-[20px] text-[18px] lg:m-0 leading-[18px] font-poly-sans lg:absolute lg:text-[20px] lg:leading-[20px] font-semibold'
+          transition={{ duration: 0.6 }}
         >
           Sustainability
         </motion.div>
@@ -112,25 +122,30 @@ const Believe = () => {
       {/* card 2 */}
       <motion.div
         className='mt-[20px] w-full h-[373px] lg:top-[120px] lg:left-[1025px] box-borde flex flex-col lg:flex-row lg:w-[330px] lg:overflow-hidden lg:h-[355px] lg:absolute bg-[#E8FFA8] border border-current rounded-[5px] lg:p-[20px] lg:gap-[30px]'
-        // animate={active === 'card2' ? 'hover' : 'init'}
-        // variants={card2Variants}
-        // transition={{ duration: 0.6 }}
-        // onHoverStart={() => setActive('card2')}
-        // onHoverEnd={() => setActive('card1')}
+        animate={!isMobile ? (active === 'card2' ? 'hover' : 'init') : 'mobile'}
+        variants={card2Variants}
+        transition={{ duration: 0.6 }}
+        onHoverStart={() => setActive('card2')}
+        onHoverEnd={() => setActive('card1')}
       >
         <div
           className={`w-full h-[189px] lg:h-[315px] bg-center w-[330px] bg-center bg-cover bg-surface-dm index-1`}
         />
         <motion.div
-          // variants={titleVariants}
-          // transition={{ duration: 0.6 }}
-          className='mt-[24px] ml-[20px] text-[18px] leading-[18px] lg:absolute font-poly-sans lg:text-[20px] lg:leading-[20px] font-semibold'
+          variants={titleVariants}
+          transition={{ duration: 0.6 }}
+          className='mt-[24px] ml-[20px] text-[18px] lg:m-0 leading-[18px] font-poly-sans lg:absolute lg:text-[20px] lg:leading-[20px] font-semibold'
         >
+          {/* <motion.div
+          variants={titleVariants}
+          transition={{ duration: 0.6 }}
+          className='mt-[24px] ml-[20px] text-[18px] leading-[18px] lg:absolute font-poly-sans lg:text-[20px] lg:leading-[20px] font-semibold'
+        > */}
           Do some good
         </motion.div>
         <motion.div
-          // variants={contentVariants}
-          // transition={{ duration: 0.6 }}
+          variants={contentVariants}
+          transition={{ duration: 0.6 }}
           className='mx-[20px] left-[8px] flex flex-col justify-center'
         >
           <div className='w-[330px]'>
