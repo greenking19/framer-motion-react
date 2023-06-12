@@ -1,0 +1,24 @@
+.progress {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.progress {
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.indicator {
+  stroke: green;
+}
+
+.bg {
+  stroke: red;
+  opacity: 0.2;
+}
