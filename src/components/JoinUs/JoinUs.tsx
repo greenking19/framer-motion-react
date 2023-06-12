@@ -3,7 +3,7 @@ import usp0 from './../../assets/USP0.png';
 import usp1 from './../../assets/USP1.png';
 import usp2 from './../../assets/USP2.png';
 import React, { useEffect } from 'react';
-import './index.css';
+import './JoinUs.css';
 
 interface JoinUsProps {}
 

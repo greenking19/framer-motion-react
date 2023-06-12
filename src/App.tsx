@@ -1,6 +1,6 @@
 import './App.css';
 import Believe from './components/Believe/Believe';
-import JoinUs from './components/JoinUs';
+import JoinUs from './components/JoinUs/JoinUs';
 import Year from './components/Year/Year';
 
 function App() {
