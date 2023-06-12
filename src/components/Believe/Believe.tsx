@@ -63,8 +63,9 @@ const Believe = () => {
   };
 
   return (
-    <div className='w-full h-[596px] bg-white relative box-content pb-[200px]'>
-      <div className='absolute left-[34px] top-[50%] translate-y-[-50%]'>
+    <div className='w-full h-[596px] bg-white relative box-content'>
+      {/* title */}
+      <div className='lg:absolute left-[34px] top-[229px]'>
         <div className='w-[331px]'>We believe</div>
         <div className='w-[331px] text-[35px] leading-[35px] font-poly-sans font-semibold'>
           Save planet is something everyone can do
@@ -72,9 +73,9 @@ const Believe = () => {
       </div>
 
       {/* card 1 */}
-      <motion.div
+      {/* <motion.div
         layout
-        className='card1 box-borde h-[355px] absolute left-[368px] bg-[#EDE9FF] rounded-[5px] top-[130px] border border-current p-[20px] gap-[30px] flex'
+        className='card1  box-borde h-[355px] lg:absolute left-[368px] bg-[#EDE9FF] rounded-[5px] top-[130px] border border-current p-[20px] gap-[30px] flex'
         animate={active === 'card1' ? 'hover' : 'init'}
         variants={cardVariants}
         transition={{ duration: 0.6 }}
@@ -105,9 +106,9 @@ const Believe = () => {
             </p>
           </div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
       {/* card 2 */}
-      <motion.div
+      {/* <motion.div
         className='top-[120px] left-[1025px] box-borde flex w-[330px] overflow-hidden h-[355px] absolute bg-[#E8FFA8] border border-current rounded-[5px] p-[20px] gap-[30px]'
         animate={active === 'card2' ? 'hover' : 'init'}
         variants={card2Variants}
@@ -141,7 +142,7 @@ const Believe = () => {
             </p>
           </div>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

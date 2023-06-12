@@ -1,10 +1,4 @@
-import {
-  motion,
-  useAnimate,
-  useInView,
-  useMotionValueEvent,
-  useScroll
-} from 'framer-motion';
+import { motion, useAnimate, useInView, useScroll } from 'framer-motion';
 import usp0 from './../../assets/USP0.png';
 import usp1 from './../../assets/USP1.png';
 import usp2 from './../../assets/USP2.png';
@@ -18,7 +12,6 @@ const JoinUs: React.FC<JoinUsProps> = (props) => {
   const [dashboardRef, dashboardAnimate] = useAnimate();
   const isInView = useInView(scope);
   const isDashboardInView = useInView(dashboardRef);
-  const { scrollY } = useScroll();
 
   const { scrollYProgress } = useScroll({
     target: scope,
@@ -53,6 +46,7 @@ const JoinUs: React.FC<JoinUsProps> = (props) => {
     if (isInView) {
       animate(scope.current, { marginTop: -200 }, { duration: 0.6 });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
 
   useEffect(() => {
@@ -69,6 +63,7 @@ const JoinUs: React.FC<JoinUsProps> = (props) => {
         { duration: 0.6 }
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDashboardInView]);
 
   return (
