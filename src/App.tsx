@@ -9,7 +9,7 @@ function App() {
       <div className='h-[480px] w-full' />
       <Year />
       <Believe />
-      <JoinUs />
+      {/* <JoinUs /> */}
       <div className='h-[1480px] w-full' />
     </div>
   );
